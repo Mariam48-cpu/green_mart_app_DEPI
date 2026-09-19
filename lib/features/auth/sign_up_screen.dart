@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:green_mart_app/core/constant/app_design.dart';
 import 'package:green_mart_app/core/constant/app_images.dart';
 import 'package:green_mart_app/core/function/navigation.dart';
 import 'package:green_mart_app/core/style/app_color.dart';
@@ -8,6 +9,8 @@ import 'package:green_mart_app/core/style/text_style.dart';
 import 'package:green_mart_app/core/widgets/custom_text_field.dart';
 import 'package:green_mart_app/core/widgets/main_button.dart';
 import 'package:green_mart_app/features/auth/login_screen.dart';
+
+import 'number_screen.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
@@ -18,11 +21,11 @@ class SignUpScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding: EdgeInsets.all(16),
+            padding: EdgeInsets.all(AppDesign.ContentPadding),
             child: SingleChildScrollView(
               child: Column(
-                mainAxisAlignment: .center,
-                crossAxisAlignment: .start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Align(
                     alignment: Alignment.center,
@@ -49,7 +52,7 @@ class SignUpScreen extends StatelessWidget {
                   MainButton(
                     text: 'Sign Up',
                     onPressed: () {
-                      pushReplacement(context, LoginScreen());
+                      pushReplacement(context, NumberScreen());
                     },
                   ),
                   Gap(20),

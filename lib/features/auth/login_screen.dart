@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:green_mart_app/core/constant/app_design.dart';
 import 'package:green_mart_app/core/constant/app_images.dart';
 import 'package:green_mart_app/core/function/navigation.dart';
 import 'package:green_mart_app/core/style/app_color.dart';
@@ -18,11 +19,11 @@ class LoginScreen extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Padding(
-            padding:  EdgeInsets.all(16),
+            padding:  EdgeInsets.all(AppDesign.ContentPadding),
             child: SingleChildScrollView(
               child: Column(
-                mainAxisAlignment: .center,
-                crossAxisAlignment: .start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Align(
                     alignment: Alignment.center,
@@ -62,7 +63,7 @@ class LoginScreen extends StatelessWidget {
                   MainButton(
                     text: 'Login',
                     onPressed: () {
-                      pushReplacement(context,  SignUpScreen());
+                      pushReplacement(context,SignUpScreen());
                     },
                   ),
                    Gap(20),
@@ -75,7 +76,7 @@ class LoginScreen extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () {
-                          pushReplacement(context,  SignUpScreen());
+                          pushReplacement(context, SignUpScreen());
                         },
                         style: TextButton.styleFrom(
                           minimumSize: .zero,
