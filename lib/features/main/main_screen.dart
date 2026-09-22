@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:green_mart_app/core/widgets/bottom_nav_bar.dart';
+import 'package:green_mart_app/features/auth/screens/profile_screen.dart';
 import 'package:green_mart_app/features/cart/screens/cart_screen.dart';
 import 'package:green_mart_app/features/shop/screens/explore_screen.dart';
 import 'package:green_mart_app/features/shop/screens/favourite_screen.dart';
@@ -20,7 +21,7 @@ class _MainScreenState extends State<MainScreen> {
     ExploreScreen(),
     CartScreen(),
     FavouriteScreen(),
-    const Center(child: Text('Account Screen')),
+   ProfileScreen(),
   ];
 
   @override

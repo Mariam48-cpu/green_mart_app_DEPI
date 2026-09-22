@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:green_mart_app/core/style/app_color.dart';
 import 'package:green_mart_app/core/style/app_themes.dart';
 import 'package:green_mart_app/core/style/text_style.dart';
+import 'package:green_mart_app/features/auth/screens/profile_screen.dart';
+import 'package:green_mart_app/features/auth/widgets/profile_header.dart';
 import 'package:green_mart_app/features/main/main_screen.dart';
 
 void main() {
@@ -17,7 +19,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: AppThemes.lightTheme,
       debugShowCheckedModeBanner: false,
-      home: MainScreen(),
+      home: ProfileScreen(),
     );
   }
 }

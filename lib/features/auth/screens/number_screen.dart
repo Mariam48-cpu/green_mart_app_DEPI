@@ -6,8 +6,8 @@ import 'package:green_mart_app/core/style/app_color.dart';
 import 'package:green_mart_app/core/style/text_style.dart';
 import 'package:green_mart_app/core/widgets/custom_text_field.dart';
 import 'package:green_mart_app/core/widgets/main_button.dart';
-import 'package:green_mart_app/features/auth/login_screen.dart';
-import 'package:green_mart_app/features/auth/verification_screen.dart';
+import 'package:green_mart_app/features/auth/screens/login_screen.dart';
+import 'package:green_mart_app/features/auth/screens/verification_screen.dart';
 
 class NumberScreen extends StatelessWidget {
   const NumberScreen({super.key});

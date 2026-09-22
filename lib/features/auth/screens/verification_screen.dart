@@ -5,7 +5,7 @@ import 'package:green_mart_app/core/function/navigation.dart';
 import 'package:green_mart_app/core/style/app_color.dart';
 import 'package:green_mart_app/core/style/text_style.dart';
 import 'package:green_mart_app/core/widgets/main_button.dart';
-import 'package:green_mart_app/features/auth/login_screen.dart';
+import 'package:green_mart_app/features/auth/screens/login_screen.dart';
 import 'package:pinput/pinput.dart';
 
 class VerificationScreen extends StatefulWidget {

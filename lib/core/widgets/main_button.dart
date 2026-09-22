@@ -3,10 +3,20 @@ import 'package:green_mart_app/core/style/app_color.dart';
 import 'package:green_mart_app/core/style/text_style.dart';
 
 class MainButton extends StatelessWidget {
-  const MainButton({super.key, required this.text, required this.onPressed});
+  const MainButton({
+    super.key,
+    required this.text,
+    required this.onPressed,
+    this.color,
+    this.textColor,
+    this.icon,
+  });
 
   final String text;
   final VoidCallback onPressed;
+  final Color? color;
+  final Color? textColor;
+  final IconData? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -16,16 +26,26 @@ class MainButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: AppColor.primaryColor,
+          backgroundColor: color ?? AppColor.primaryColor,
           foregroundColor: Colors.white,
           elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(14),
           ),
         ),
-        child: Text(
-          text,
-          style: TextStyles.subtitle.copyWith(color: AppColor.whiteColor),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (icon != null) ...[
+              Icon(icon, color: textColor ?? AppColor.whiteColor),
+            ],
+            Text(
+              text,
+              style: TextStyles.subtitle.copyWith(
+                color: textColor ?? AppColor.whiteColor,
+              ),
+            ),
+          ],
         ),
       ),
     );
