@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:green_mart_app/core/style/app_color.dart';
 import 'package:green_mart_app/core/style/text_style.dart';
 
@@ -15,7 +16,7 @@ class ProfileHeader extends StatelessWidget {
             radius: 30,
             backgroundImage: AssetImage('assets/images/profile.jpg'),
           ),
-          const SizedBox(width: 16),
+          Gap(16),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -28,7 +29,7 @@ class ProfileHeader extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(width: 8),
+                    Gap(8),
                     const Icon(
                       Icons.edit,
                       size: 18,
@@ -36,7 +37,7 @@ class ProfileHeader extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 4),
+                Gap(4),
                 Text(
                   'mariamsanad@gmail.com',
                   style: TextStyles.body.copyWith(color: Colors.grey),

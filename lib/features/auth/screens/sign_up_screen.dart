@@ -9,9 +9,7 @@ import 'package:green_mart_app/core/style/text_style.dart';
 import 'package:green_mart_app/core/widgets/custom_text_field.dart';
 import 'package:green_mart_app/core/widgets/main_button.dart';
 import 'package:green_mart_app/features/auth/screens/login_screen.dart';
-
-import 'number_screen.dart';
-
+import 'package:green_mart_app/features/main/main_screen.dart';
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
 
@@ -52,7 +50,7 @@ class SignUpScreen extends StatelessWidget {
                   MainButton(
                     text: 'Sign Up',
                     onPressed: () {
-                      pushReplacement(context, NumberScreen());
+                      pushReplacement(context, MainScreen());
                     },
                   ),
                   Gap(20),

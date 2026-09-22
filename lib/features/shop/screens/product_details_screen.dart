@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:green_mart_app/core/constant/app_design.dart';
 import 'package:green_mart_app/core/style/app_color.dart';
 import 'package:green_mart_app/core/style/text_style.dart';
@@ -98,14 +99,14 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 5),
+                    Gap(5),
                     Text(
                       '${product.quantity % 1 == 0 ? product.quantity.toInt() : product.quantity} ${product.unit}',
                       style: TextStyles.caption1.copyWith(
                         color: AppColor.greyColor,
                       ),
                     ),
-                    const SizedBox(height: 18),
+                    Gap(18),
                     Row(
                       children: [
                         QuantitySelector(
@@ -130,7 +131,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 20),
+                    Gap(20),
                     const Divider(color: AppColor.borderColor),
                     ExpansionTile(
                       tilePadding: EdgeInsets.zero,
@@ -171,7 +172,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                               color: AppColor.greyColor,
                             ),
                           ),
-                          const SizedBox(width: 8),
+                          Gap(8),
                           const Icon(Icons.chevron_right),
                         ],
                       ),
@@ -215,12 +216,12 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                               color: AppColor.redColor,
                             ),
                           ),
-                          const SizedBox(width: 8),
+                          Gap(8),
                           const Icon(Icons.chevron_right),
                         ],
                       ),
                     ),
-                    const SizedBox(height: 10),
+                    Gap(10),
                     MainButton(
                       text: 'Add To Cart',
                       onPressed: () {

@@ -14,7 +14,7 @@ class ShopScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-  final exclusiveProducts = fruitsAndVegetables;
+    final exclusiveProducts = fruitsAndVegetables;
     final bestSellingProducts = beverageProducts;
 
     return CustomScrollView(
@@ -61,7 +61,7 @@ class ShopScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20),
               scrollDirection: Axis.horizontal,
               itemCount: exclusiveProducts.length,
-              separatorBuilder: (error, index) => SizedBox(width: 12),
+              separatorBuilder: (error, index) => Gap(12),
               itemBuilder: (error, index) {
                 return ProductCard(product: exclusiveProducts[index]);
               },
@@ -85,7 +85,7 @@ class ShopScreen extends StatelessWidget {
             ),
           ),
         ),
-        SliverToBoxAdapter(child: SizedBox(height: 15)),
+        SliverToBoxAdapter(child: Gap(15)),
         SliverToBoxAdapter(
           child: SizedBox(
             height: 235,
@@ -93,7 +93,7 @@ class ShopScreen extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 20),
               scrollDirection: Axis.horizontal,
               itemCount: bestSellingProducts.length,
-              separatorBuilder: (error, index) => SizedBox(width: 12),
+              separatorBuilder: (error, index) => Gap(12),
               itemBuilder: (error, index) {
                 return ProductCard(product: bestSellingProducts[index]);
               },
@@ -101,7 +101,7 @@ class ShopScreen extends StatelessWidget {
           ),
         ),
 
-        SliverToBoxAdapter(child: SizedBox(height: 30)),
+        SliverToBoxAdapter(child: Gap(30)),
       ],
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:green_mart_app/core/style/app_color.dart';
 import 'package:green_mart_app/core/style/text_style.dart';
 import 'package:green_mart_app/features/shop/data/product_model.dart';
@@ -50,7 +51,7 @@ class ProductCard extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 8),
+            Gap(8),
 
             Text(
               product.title,
@@ -62,15 +63,13 @@ class ProductCard extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(height: 4),
-
+            Gap(4),
             Text(
               '${product.quantity % 1 == 0 ? product.quantity.toInt() : product.quantity} ${product.unit}',
               style: TextStyles.caption2.copyWith(color: AppColor.greyColor),
             ),
 
-            const SizedBox(height: 10),
-
+            Gap(10),
             Row(
               children: [
                 Text(
